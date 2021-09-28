@@ -354,7 +354,15 @@ Once the case has completed running, the decomposed fields and mesh from process
 cat(readLines('~/OpenFOAM/tanmay-6/run/PhaseFieldSolverDynamic/freeGrowth/construct'), sep = '\n')
 ```
 
-The results reconstructed to time directories can be viewed using ParaView by opening the *freeGrowth.foam* case module. The evolution of phase-field profile corresponding to three time steps are shown in Figure 4-6.
+The results reconstructed to time directories can be viewed using ParaView by creating and opening *freeGrowth.foam* case module:
+
+cd \$FOAM_RUN/PhaseFieldSolverDynamic/freeGrowth
+
+touch freeGrowth.foam
+
+paraview freeGrowth.foam
+
+The evolution of phase-field profile corresponding to three time steps are shown in Figure 4-6.
 
 ```{r first, echo=FALSE, out.width='50%', fig.align = 'center', fig.cap = "Figure 4: Phase-field profile at time 100000."}
 knitr::include_graphics('freeGrowth100000.png')
@@ -476,7 +484,7 @@ Similar to section 1.3, the solver for this case is run parallely using runParal
 
 ## Post-processing
 
-Similar to section 1.4, the results reconstructed to time directories can be viewed by opening the *directionalSolidification.foam* case module using ParaView. The evolution of phase-field profile corresponding to three time steps are shown in Figure 9-11.
+Similar to section 1.4, the results reconstructed to time directories can be viewed by creating and opening the *directionalSolidification.foam* case module using ParaView. The evolution of phase-field profile corresponding to three time steps are shown in Figure 9-11.
 
 ```{r firstb, echo=FALSE, out.width='50%', fig.align = 'center', fig.cap = "Figure 9: Phase-field profile at time 200000."}
 knitr::include_graphics('directionalsolidification200000.png')
