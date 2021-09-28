@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Phase-field Solver with Dynamic Interface Refinement: Code-guide for solver phaseFieldDynamic</title>
+<title>Phase-field Solver with Dynamic Interface Refinement: PhaseFieldSolverDynamic/phaseFieldSolverDynamic/dAdgradPhiMod.H File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('d_adgrad_phi_mod_8_h.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -81,71 +81,58 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div class="PageDoc"><div class="header">
+<div class="header">
+  <div class="summary">
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">Code-guide for solver phaseFieldDynamic </div>  </div>
+<div class="title">dAdgradPhiMod.H File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The solver requires <em>dynamicInterfaceRefineFvMesh</em> library, and has been successfully tested using OpenFOAM v6. Before compiling the solver, the library must be obtained in the following procedure:</p>
-<ul>
-<li>You can compile the lib where ever you want. This is just an example: <blockquote class="doxtable">
-<p>mkdir -p $FOAM_RUN/../OpenFOAM_extensions </p>
-</blockquote>
-</li>
-<li>Switch to this directory <blockquote class="doxtable">
-<p>cd $FOAM_RUN/../OpenFOAM_extensions </p>
-</blockquote>
-</li>
-<li>Clone the repository <blockquote class="doxtable">
-<p>git clone <a href="https://bitbucket.org/shor-ty/dynamicinterfacerefinefvmesh.git">https://bitbucket.org/shor-ty/dynamicinterfacerefinefvmesh.git</a> </p>
-</blockquote>
-</li>
-<li>Move to the new library folder <blockquote class="doxtable">
-<p>cd dynamicinterfacerefinefvmesh </p>
-</blockquote>
-</li>
-<li>Checkout the openfoam version you need (e.g. using 5.x) <blockquote class="doxtable">
-<p>git checkout OpenFOAM-5.x </p>
-</blockquote>
-</li>
-<li>Go to the library source <blockquote class="doxtable">
-<p>cd src/dynamicFvMesh </p>
-</blockquote>
-</li>
-<li>Compile the lib <blockquote class="doxtable">
-<p>wmake libso </p>
-</blockquote>
-</li>
-<li>Finally you have to include the libary into your solver set-up. Therefore add the following line to your dynamicMeshDict <blockquote class="doxtable">
-<p>dynamicFvMeshLibs ( "libdynamicInterfaceRefineFvMesh.so" ); </p>
-</blockquote>
-</li>
-<li>The best way is to copy the dynamicMeshDict to your case and modify it.</li>
-</ul>
-<h1><a class="anchor" id="s1"></a>
-Compiling the solver</h1>
-<ul>
-<li>Following commands should create the executable of the solver <blockquote class="doxtable">
-<p>cd $FOAM_RUN/phaseFieldSolverDynamic/phaseFieldSolverDynamic </p>
-</blockquote>
-<blockquote class="doxtable">
-<p>wclean </p>
-</blockquote>
-<blockquote class="doxtable">
-<p>wmake </p>
-</blockquote>
-</li>
-<li>The solver can be run by following the instructions in <em>userGuide</em>.</li>
-</ul>
-<h1><a class="anchor" id="s2"></a>
-Further details</h1>
-<p>The implementation, client and header files of the solver have been written following OpenFOAM conventions. These are explained next with flow charts generated from the source code using Doxygen. It must be noted that the solver is based on <a href="https://www.openfoam.com/documentation/guides/latest/doc/guide-applications-solvers-basic-laplacianFoam.html" title="laplacianFoam">laplacianFoam</a> solver within OpenFOAM. Hence, it may be helpful for the user to become familiar with <a href="http://foam.sourceforge.net/docs/Guides-a4/ProgrammersGuide.pdf" title="OpenFOAM Programmer’s Guide">OpenFOAM Programmer’s Guide</a> and <a href="https://www.openfoam.com/documentation/guides/latest/doc/guide-applications-solvers-basic-laplacianFoam.html" title="laplacianFoam">laplacianFoam</a> beforehand. </p>
-</div></div><!-- PageDoc -->
+<div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="d_adgrad_phi_mod_8_h__dep__incl.png" border="0" usemap="#a_phase_field_solver_dynamic_2phase_field_solver_dynamic_2d_adgrad_phi_mod_8_hdep" alt=""/></div>
+<map name="a_phase_field_solver_dynamic_2phase_field_solver_dynamic_2d_adgrad_phi_mod_8_hdep" id="a_phase_field_solver_dynamic_2phase_field_solver_dynamic_2d_adgrad_phi_mod_8_hdep">
+<area shape="rect" title=" " alt="" coords="5,5,200,61"/>
+<area shape="rect" href="alpha_eqn_8_h.html" title=" " alt="" coords="5,109,200,165"/>
+</map>
+</div>
+</div>
+<p><a href="d_adgrad_phi_mod_8_h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a528154c0fce3d274c4d3f1c60cade085"><td class="memItemLeft" align="right" valign="top">volVectorField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d_adgrad_phi_mod_8_h.html#a528154c0fce3d274c4d3f1c60cade085">q</a> =<a class="el" href="read_transport_properties_8_h.html#af589b6be2b2f8d27fa13e0d974be4e09">dimx</a>*fvc::grad(<a class="el" href="create_fields_8_h.html#a8aee6609d88e034725a0cb36b6e2d72f">phi</a>)</td></tr>
+<tr class="memdesc:a528154c0fce3d274c4d3f1c60cade085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal vector to the interface, q.  <a href="d_adgrad_phi_mod_8_h.html#a528154c0fce3d274c4d3f1c60cade085">More...</a><br /></td></tr>
+<tr class="separator:a528154c0fce3d274c4d3f1c60cade085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a528154c0fce3d274c4d3f1c60cade085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528154c0fce3d274c4d3f1c60cade085">&#9670;&nbsp;</a></span>q</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volVectorField q =<a class="el" href="read_transport_properties_8_h.html#af589b6be2b2f8d27fa13e0d974be4e09">dimx</a>*fvc::grad(<a class="el" href="create_fields_8_h.html#a8aee6609d88e034725a0cb36b6e2d72f">phi</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Normal vector to the interface, q. </p>
+
+<p class="definition">Definition at line <a class="el" href="d_adgrad_phi_mod_8_h_source.html#l00003">3</a> of file <a class="el" href="d_adgrad_phi_mod_8_h_source.html">dAdgradPhiMod.H</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="phase_field_dynamic_8_c_source.html#l00040">main()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_1a3b888bedee970a069cb383b7522233.html">PhaseFieldSolverDynamic</a></li><li class="navelem"><a class="el" href="dir_a2a129e03ffde64de854442a35fb68d6.html">phaseFieldSolverDynamic</a></li><li class="navelem"><a class="el" href="d_adgrad_phi_mod_8_h.html">dAdgradPhiMod.H</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

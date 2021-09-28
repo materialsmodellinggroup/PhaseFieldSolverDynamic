@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Phase-field Solver with Dynamic Interface Refinement: Code-guide for solver phaseFieldDynamic</title>
+<title>Phase-field Solver with Dynamic Interface Refinement: DynamicPhaseField-main Directory Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('dir_78687668c886746d322584fc37c741f7.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -81,71 +81,23 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div class="PageDoc"><div class="header">
+<div class="header">
   <div class="headertitle">
-<div class="title">Code-guide for solver phaseFieldDynamic </div>  </div>
+<div class="title">DynamicPhaseField-main Directory Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The solver requires <em>dynamicInterfaceRefineFvMesh</em> library, and has been successfully tested using OpenFOAM v6. Before compiling the solver, the library must be obtained in the following procedure:</p>
-<ul>
-<li>You can compile the lib where ever you want. This is just an example: <blockquote class="doxtable">
-<p>mkdir -p $FOAM_RUN/../OpenFOAM_extensions </p>
-</blockquote>
-</li>
-<li>Switch to this directory <blockquote class="doxtable">
-<p>cd $FOAM_RUN/../OpenFOAM_extensions </p>
-</blockquote>
-</li>
-<li>Clone the repository <blockquote class="doxtable">
-<p>git clone <a href="https://bitbucket.org/shor-ty/dynamicinterfacerefinefvmesh.git">https://bitbucket.org/shor-ty/dynamicinterfacerefinefvmesh.git</a> </p>
-</blockquote>
-</li>
-<li>Move to the new library folder <blockquote class="doxtable">
-<p>cd dynamicinterfacerefinefvmesh </p>
-</blockquote>
-</li>
-<li>Checkout the openfoam version you need (e.g. using 5.x) <blockquote class="doxtable">
-<p>git checkout OpenFOAM-5.x </p>
-</blockquote>
-</li>
-<li>Go to the library source <blockquote class="doxtable">
-<p>cd src/dynamicFvMesh </p>
-</blockquote>
-</li>
-<li>Compile the lib <blockquote class="doxtable">
-<p>wmake libso </p>
-</blockquote>
-</li>
-<li>Finally you have to include the libary into your solver set-up. Therefore add the following line to your dynamicMeshDict <blockquote class="doxtable">
-<p>dynamicFvMeshLibs ( "libdynamicInterfaceRefineFvMesh.so" ); </p>
-</blockquote>
-</li>
-<li>The best way is to copy the dynamicMeshDict to your case and modify it.</li>
-</ul>
-<h1><a class="anchor" id="s1"></a>
-Compiling the solver</h1>
-<ul>
-<li>Following commands should create the executable of the solver <blockquote class="doxtable">
-<p>cd $FOAM_RUN/phaseFieldSolverDynamic/phaseFieldSolverDynamic </p>
-</blockquote>
-<blockquote class="doxtable">
-<p>wclean </p>
-</blockquote>
-<blockquote class="doxtable">
-<p>wmake </p>
-</blockquote>
-</li>
-<li>The solver can be run by following the instructions in <em>userGuide</em>.</li>
-</ul>
-<h1><a class="anchor" id="s2"></a>
-Further details</h1>
-<p>The implementation, client and header files of the solver have been written following OpenFOAM conventions. These are explained next with flow charts generated from the source code using Doxygen. It must be noted that the solver is based on <a href="https://www.openfoam.com/documentation/guides/latest/doc/guide-applications-solvers-basic-laplacianFoam.html" title="laplacianFoam">laplacianFoam</a> solver within OpenFOAM. Hence, it may be helpful for the user to become familiar with <a href="http://foam.sourceforge.net/docs/Guides-a4/ProgrammersGuide.pdf" title="OpenFOAM Programmer’s Guide">OpenFOAM Programmer’s Guide</a> and <a href="https://www.openfoam.com/documentation/guides/latest/doc/guide-applications-solvers-basic-laplacianFoam.html" title="laplacianFoam">laplacianFoam</a> beforehand. </p>
-</div></div><!-- PageDoc -->
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="subdirs"></a>
+Directories</h2></td></tr>
+<tr class="memitem:dir_0dc876ebbc320b4cf6ba13810f89942a"><td class="memItemLeft" align="right" valign="top">directory &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dir_0dc876ebbc320b4cf6ba13810f89942a.html">phaseFieldSolverDynamic</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_78687668c886746d322584fc37c741f7.html">DynamicPhaseField-main</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
