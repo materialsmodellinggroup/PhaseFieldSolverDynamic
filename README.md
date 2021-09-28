@@ -10,7 +10,7 @@ It contains the source files of the solver.
 
 ## userGuide
 
-It contains the Rmarkdown files for creating the HTML (userGuide.html) and PDF (userGuide.pdf) documentations of the OpenFOAM cases.
+It contains the R Markdown files for creating the HTML (userGuide.html) and PDF (userGuide.pdf) documentations of the OpenFOAM cases.
 
 ## freeGrowth
 
